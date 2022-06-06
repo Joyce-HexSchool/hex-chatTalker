@@ -94,7 +94,7 @@
             &::before {
                 width: 49px;
                 height: 126px;
-                bottom: -141px;
+                bottom: -200px;
             }
 
             .container {
@@ -240,6 +240,11 @@
 }
 
 @media (max-width: 1200px) {
+    .row-role::before{
+        width: 88px;
+        height: 135px;
+        bottom: -32px;
+    }
     .role-list {
         width: 550px;
         margin: 0 auto;
