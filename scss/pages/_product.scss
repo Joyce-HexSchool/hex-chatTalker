@@ -1,0 +1,291 @@
+.body-product {
+
+    // 最上面滿版背景
+    .wrap {
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner.svg);
+    }
+
+    // banner
+    .banner {
+        // 調大一些讓文字不要跑出來
+        margin-bottom: 110px;
+
+        .container {
+            height: 470px;
+        }
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 470px;
+            position: absolute;
+            background: $c-banner-product;
+            border-bottom-left-radius: 300px;
+            z-index: -1;
+        }
+    }
+
+    @media (max-width: 900px) {
+        header {
+            margin-bottom: 0;
+        }
+
+        .banner::before {
+            height: 382px;
+            border-bottom-left-radius: 245px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .banner {
+            padding-top: 48px;
+            margin-bottom: 0;
+
+            .container {
+                display: block;
+            }
+
+            &::before {
+                top: -48px;
+            }
+
+            &-title {
+                font-size: $fz-h2;
+            }
+        }
+    }
+
+    @media (max-width: 376px) {
+        .wrap {
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/banner_sm.svg);
+        }
+
+        .banner::before {
+            height: 495px;
+            border-bottom-left-radius: 125px;
+        }
+    }
+}
+
+// 彈性選擇，提供您選擇最適合的方案
+.row-product {
+    position: relative;
+
+    // 圓球背景
+    &::before {
+        content: "";
+        width: 94px;
+        height: 361px;
+        background: right/cover url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg);
+        position: absolute;
+        top: 306px;
+        left: 0;
+        z-index: -1;
+    }
+
+    .row-title {
+        margin-bottom: $m-6;
+    }
+}
+
+.product-btn-list {
+    justify-content: center;
+    gap: $m-2;
+    margin-bottom: $m-6;
+}
+
+.product-list {
+    justify-content: center;
+    gap: $gutter;
+}
+
+.product {
+    @include round-shadow;
+    background: $c-body;
+
+    &-title {
+        font-size: $fz-h3;
+        font-weight: bold;
+        padding: $m-2;
+        border-bottom: 1px solid $c-dot;
+    }
+
+    &-desc {
+        padding: $m-4;
+    }
+
+    &-cost {
+        padding: 0 $m-3;
+        margin-bottom: $m-4;
+    }
+
+    &-btn {
+        margin-bottom: $m-4;
+    }
+}
+
+.cost {
+    width: 169px;
+    padding: 21px 0;
+    background: $c-cc;
+    @include round;
+
+    &-title {
+        font-size: $fz-s;
+    }
+
+    &-number {
+        font-size: $fz-h2;
+
+        span {
+            font-size: $fz-s;
+            margin-left: $m-1;
+        }
+
+        .twd {
+            font-weight: bold;
+        }
+    }
+
+    .person {
+        color: $c-primary;
+    }
+}
+
+.equal {
+    font-size: $fz-equal;
+}
+
+.adv {
+    text-align: left;
+    padding-left: 32.5px;
+    margin: 0 $m-3 $m-2;
+    background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/icon_check.svg);
+    background-repeat: no-repeat;
+    background-position: left 5px;
+
+    &:last-child {
+        margin-bottom: $m-4;
+    }
+}
+
+@media (max-width: 957px) {
+    .row-product::before {
+        width: 96px;
+        height: 204px;
+        top: calc(50% + 30px);
+    }
+}
+
+@media (max-width: 715px) {
+    .product-btn-list {
+        gap: $m-1;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-btn-list {
+        flex-wrap: nowrap;
+        overflow-y: scroll;
+        gap: 6px;
+        justify-content: flex-start;
+        // 隱藏滾動條
+        -ms-overflow-style: none; // IE and Edge
+        scrollbar-width: none; // Firefox
+
+        // Chrome, Safari and Opera
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .product-list {
+        gap: 24px;
+    }
+
+    .product {
+        &-desc {
+            padding: $m-3;
+        }
+
+        &-cost {
+            padding: 0 $m-2;
+            flex-wrap: nowrap;
+            margin-bottom: 30px;
+        }
+
+        &-btn {
+            margin-bottom: 24px;
+        }
+    }
+
+    .cost {
+        width: 139px;
+
+        &-number {
+            font-size: 28px;
+
+            span {
+                margin-left: 4px;
+            }
+        }
+    }
+
+    .equal {
+        font-size: $fz-h3;
+    }
+
+    .adv {
+        font-size: 14px;
+        padding-left: 32px;
+        padding-right: 0;
+        background-size: 16px 14px;
+
+        &:last-child {
+            margin-bottom: 35px;
+        }
+
+    }
+}
+
+// 常見問題
+.faq-list {
+    margin: 0 auto;
+}
+
+.fqa {
+    text-align: left;
+    @include round-shadow;
+    padding: $m-2 $m-4;
+    margin-bottom: $m-2;
+
+    &-title {
+        font-size: $fz-m;
+    }
+
+    &-desc {
+        color: $c-text-secondary;
+        padding: $m-3 0 $m-2;
+    }
+}
+
+@media (max-width: 452px) {
+    .row-fqa {
+        .row-title {
+            margin-bottom: 32px;
+        }
+    }
+
+    .fqa {
+        padding: $m-2;
+
+        &-title {
+            font-size: 16px;
+
+            &::before,
+            &::after {
+                width: 16px;
+            }
+        }
+    }
+}

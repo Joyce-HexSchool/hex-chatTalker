@@ -1,0 +1,45 @@
+// 按鈕
+.btn-top{
+    @include btn-top(70px, $fz-l, $m-3);
+    right: $m-6;
+}
+@media (max-width: 900px) {
+    .btn-top{
+    @include btn-top(60px, $fz-m, $m-2);
+    }
+}
+@media (max-width: 576px) {
+    .btn-top{
+    @include btn-top(50px, 14px, $m-2);
+    }
+}
+
+// 大小
+.btn{
+    @include btn-size(128px, 40px, 16px);
+}
+
+.btn-l{
+    @include btn-size(150px, 50px, $fz-m);
+}
+@media (max-width:865px) {
+    .btn-l{
+    @include btn-size(120px, 45px, $fz-m);
+    }
+}
+@media (max-width:715px) {
+    .btn-l{
+    @include btn-size(92px, 40px, 16px);
+    }
+}
+
+// 顏色
+.btn-primary, .btn-outline-primary.active {
+    @include btn($c-primary);
+}
+.btn-secondary {
+    @include btn($c-secondary);
+}
+.btn-outline-primary{
+    @include btn-outline($c-primary);
+}

@@ -1,0 +1,46 @@
+// 摺疊選單
+.collapse {
+    height: 58px;
+    transition: 0.5s;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    &-title {
+        transition: 0.3s;
+        &::before, &::after {
+            content: "";
+            width: 20px;
+            height: 2px;
+            background: $c-primary;
+            position: absolute;
+            top: 28px;
+            right:32px;
+            transition: 0.5s;
+        }
+    }
+    &-desc{
+        opacity: 0;
+        transition: 0.3s;
+        transition-delay: 0.3s;
+    }  
+}
+// 展開後
+.collapse.show {
+    height: 154px;
+    .collapse-title {
+        color: $c-primary;
+        &::after{
+            transform: rotate(90deg);
+        }
+    }
+    .collapse-desc{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 420px) {
+    .collapse.show{
+        height: 168px;
+    }
+}

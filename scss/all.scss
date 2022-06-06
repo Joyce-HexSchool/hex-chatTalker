@@ -1,0 +1,15 @@
+@import "base/_variable";
+@import "base/_reset";
+@import "base/_base";
+@import "base/_mixin";  
+
+// components
+@import "components/_button";
+@import "components/_collapse";
+
+//字型
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+
+@import "pages/_layout";
+@import "pages/_index";
+@import "pages/_product";

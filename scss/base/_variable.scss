@@ -1,0 +1,47 @@
+// 布局網格 只用到3-10
+// 每欄 76px 共 12欄，間隔寬度 16px，最外面也有兩條 (共13條)
+// .container 寬度為 76*12 + 16*13 = 1120px
+$max: 10;
+$col-width: 76px;
+$gutter: 16px;
+
+@for $i from 3 through $max {
+    $width: ($col-width + $gutter)*$i - $gutter;
+    .col-#{$i} {
+        width: $width;
+    }
+    $screen: $width + 32px;
+    @media (max-width: $screen) {
+        .col-#{$i}{
+            width: 100%;
+        }
+    }
+}
+
+// 文字大小
+// 有 48、32、24、20、18、16(網頁預設的不用)
+$fz-h1: 48px;
+$fz-h2: 32px;
+$fz-h3: 24px;
+$fz-l: 20px;
+$fz-m: 18px;
+$fz-s: 12px;
+$fz-equal: 29px;
+
+// color
+$c-primary: #56C4C5;
+$c-secondary: #FF5D50;
+$c-body: #FFFFFF;
+$c-banner-product:#F7F9FD;
+$c-cc: #F5F5F5;
+$c-text-secondary: #747474;
+$c-shadow: #00000014;
+$c-dot: #DDDDDD;
+$c-active: #FFD153;
+
+// 間距 主要以 margin-bottom 去推
+$m-1: 8px; 
+$m-2: $m-1*2; 
+$m-3: $m-1*3; 
+$m-4: $m-1*4;  //32px
+$m-6: $m-1*6;  //48px

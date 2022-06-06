@@ -1,0 +1,136 @@
+.wrap {
+    position: relative;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+// -----------header----------
+header {
+    width: 100%;
+    padding: 24px 0;
+    position: absolute;
+    .container {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 219px;
+        height: 40px;
+        background: center/contain no-repeat url(https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true);
+        text-indent: 101%;
+        white-space: nowrap;
+        overflow: hidden;
+
+        a {
+            padding: 20px 0;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    header {
+        position: relative;
+        margin-bottom: $m-4;
+        border-bottom: 2px solid $c-active;
+        background: $c-body;
+    }
+}
+@media (max-width: 576px) {
+    header {
+        padding: $m-2 0;
+
+        .logo {
+            width: auto;
+            height: 30px;
+
+            a {
+                padding: 15px 0;
+            }
+        }
+    }
+}
+@media (max-width: 376px) {
+    .logo {
+        width: 131px;
+        height: 24px;
+
+        a {
+            padding: 12px 0;
+        }
+    }
+}
+
+// -----------banner----------
+.banner {
+    pointer-events: none;
+    position: relative;
+
+    &-title {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: $m-2;
+    }
+}
+
+// -----------row----------
+.row {
+    text-align: center;
+    margin-bottom: 100px;
+
+    &-title {
+        font-size: $fz-h2;
+        font-weight: bold;
+        margin-bottom: $m-6;
+    }
+}
+
+@media (max-width: 576px) {
+    .row {
+        margin-bottom: 60px;
+
+        &-title {
+            font-size: 28px;
+        }
+    }
+}
+
+// -----------footer----------
+.footer {
+    text-align: center;
+
+    &-cc {
+        padding: $m-2;
+        background: $c-cc;
+    }
+}
+
+// swiper
+.swiper {
+    width: 100%;
+    max-width: 1088px;
+    height: 380px;
+
+    &-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background: $c-dot;
+        opacity: 1;
+        transition: width 0.3s;
+    }
+
+    &-pagination-bullet-active {
+        width: 16px;
+        border-radius: 8px;
+        background: $c-active;
+    }
+}
+@media (max-width: 1135px) {
+    .swiper{
+        width: 720px;
+    }
+}
+@media (max-width: 757px){
+    .swiper{
+        width: 335px;
+    }
+}

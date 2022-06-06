@@ -1,0 +1,452 @@
+.body-index {
+
+    // 最上面滿版背景
+    .wrap {
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home.svg);
+    }
+
+    // banner
+    .banner {
+        .container {
+            height: 100vh;
+        }
+
+        // 球背景-01
+        &::before {
+            content: "";
+            width: 138px;
+            height: 360px;
+            background: right/cover url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball01.svg);
+            position: absolute;
+            bottom: -180px;
+        }
+
+        &-desc {
+            font-size: $fz-m;
+            font-weight: bold;
+            color: $c-primary;
+            margin-bottom: $m-1;
+        }
+
+        &-subtitle {
+            font-size: $fz-l;
+        }
+
+        &-img {
+            width: 532px;
+        }
+    }
+    // footer
+    .footer {
+        background: no-repeat top center/contain url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg);
+        height: 503px;
+        padding-top: 260px;
+
+        &-title {
+            font-size: $fz-h2;
+            margin-bottom: $m-6;
+            font-weight: bold;
+        }
+
+        &-btn {
+            margin-bottom: 100px;
+        }
+    }
+
+    @media (max-width: 1040px) {
+        .banner {
+            &-content,
+            &-img {
+                width: 50%;
+            }
+
+            &-desc {
+                font-size: 16px;
+            }
+
+            &-title {
+                font-size: $fz-h2;
+            }
+
+            &-subtitle {
+                font-size: $fz-m;
+            }
+        }
+        .footer {
+            background-size: cover;
+            padding-top: 300px;
+
+            &-btn {
+                margin-bottom: 67px;
+            }
+        }
+    }
+    @media (max-width: 900px) {
+        .wrap {
+            background: none;
+        }
+
+        .banner {
+            margin-bottom: 60px;
+            background: 50% 80%/435px no-repeat url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg);
+
+            // 球背景01-2
+            &::before {
+                width: 49px;
+                height: 126px;
+                bottom: -141px;
+            }
+
+            .container {
+                display: block;
+                height: calc(100vh - 112px);
+            }
+
+            &-content,
+            &-img {
+                width: 100%;
+                max-width: 430px;
+                min-width: 304px;
+                margin: 0 auto;
+            }
+
+            &-subtitle {
+                margin-bottom: $m-4;
+            }
+        }
+    }
+    @media (max-width: 576px) {
+        .banner {
+            margin-bottom: 60px;
+            background: 50% 319px/334px no-repeat url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/bg_home_sm.svg);
+
+            &-desc,
+            &-subtitle {
+                font-size: 16px;
+            }
+        }
+        .footer {
+            &-title {
+                font-size: $fz-h3;
+                margin-bottom: $m-3;
+            }
+
+            &-btn {
+                margin-bottom: 47px;
+            }
+        }
+    }
+    @media (max-width: 376px) {
+        .footer {
+            height: 461px;
+            background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg);
+            background-size: contain;
+            padding-top: 293px;
+
+            &-btn {
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+// 三大平台，我來搞定
+.row-sns .row-title {
+    margin-bottom: $m-6;
+}
+
+.sns-list {
+    justify-content: space-around;
+}
+
+.sns {
+    &-img {
+        width: 90px;
+        margin: 0 auto $m-3;
+    }
+
+    &-title {
+        font-size: $fz-h3;
+        font-weight: bold;
+        margin-bottom: $m-3;
+    }
+
+    &-desc {
+        color: $c-text-secondary;
+    }
+}
+
+@media (max-width: 830px) {
+    .sns-list {
+        gap: $m-4;
+    }
+}
+@media (max-width: 576px) {
+    .row-sns .row-title {
+        margin-bottom: 32px;
+    }
+
+    .sns-list {
+        gap: $m-3;
+    }
+
+    .sns {
+        &-img {
+            width: 60px;
+            margin-bottom: $m-2;
+        }
+
+        &-title {
+            font-size: $fz-m;
+            margin-bottom: $m-2;
+        }
+    }
+}
+
+// 任何的角色，我都能給
+.row-role {
+    position: relative;
+
+    // 球背景02
+    &::before {
+        content: "";
+        width: 210px;
+        height: 310px;
+        background: left/cover url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball02.svg);
+        position: absolute;
+        bottom: -163px;
+        right: 0;
+        z-index: -1;
+    }
+
+    .row-desc {
+        margin-bottom: $m-6;
+    }
+}
+
+.role {
+    @include round-shadow;
+    background: $c-body;
+
+    &-title {
+        color: $c-primary;
+        font-weight: bold;
+        padding: 16px;
+    }
+
+    &-desc {
+        margin-bottom: $m-3;
+    }
+}
+
+@media (max-width: 1200px) {
+    .role-list {
+        width: 550px;
+        margin: 0 auto;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .role-list {
+        width: 260px;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    // 球02-2
+    .row-role ::before {
+        width: 88px;
+        height: 135px;
+        bottom: -32px;
+    }
+}
+
+// 快速了解客戶輪廓 建立品牌流量池
+.fun-list {
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 28px 47px;
+}
+
+.fun {
+    width: 230px;
+    text-align: left;
+    padding: 32px;
+    background: $c-body;
+    @include round-shadow;
+
+    &-img {
+        width: 86px;
+        height: 86px;
+        padding: 17px;
+        @include circle-shadow;
+        margin-bottom: $m-3;
+        display: flex;
+
+        img {
+            margin: auto;
+        }
+    }
+
+    &-title {
+        font-size: $fz-m;
+        font-weight: bold;
+        margin-bottom: $m-2;
+    }
+
+    &-desc {
+        margin-bottom: $m-2;
+    }
+}
+
+.fun-content {
+    text-align: left;
+
+    .row-desc {
+        margin-bottom: $m-3;
+    }
+}
+
+@media (max-width: 1078px) {
+    .row-fun {
+        .container {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .fun-list {
+        width: 507px;
+    }
+
+    .fun-content {
+        text-align: center;
+        margin-bottom: 32px;
+
+        .row-desc {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .row-fun .fun-list {
+        width: 276px;
+        gap: 24px;
+        justify-content: center;
+    }
+}
+
+// 好評如潮
+.row-user {
+    .row-title {
+        margin-bottom: $m-3;
+        position: relative;
+
+        // 球背景03
+        &::before {
+            content: "";
+            width: 150px;
+            height: 150px;
+            background: left/cover url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/ball03.svg);
+            position: absolute;
+            top: 46px;
+            left: -70px;
+            z-index: -1;
+        }
+    }
+}
+
+.user-list {
+    justify-content: space-between;
+    margin-bottom: $m-3;
+}
+
+.user {
+    text-align: left;
+
+    &-img {
+        width: 80px;
+        border-radius: 50%;
+        position: relative;
+        top: $m-3;
+        left: $m-4;
+    }
+
+    &-content {
+        background: $c-body;
+        padding: $m-6 $m-4 $m-3;
+        @include round-shadow;
+        width: 352px;
+        height: 248px;
+    }
+
+    &-desc {
+        text-align: justify;
+        padding-bottom: $m-3;
+        margin-bottom: $m-3;
+        border-bottom: 1px solid $c-dot;
+    }
+
+    &-job {
+        font-weight: bold;
+        margin-bottom: $m-1;
+    }
+}
+
+.star-img {
+    width: 16px;
+    height: 16px;
+    margin: 0 4px;
+}
+
+@media (max-width: 1135px) {
+    .row-user .row-title::before {
+        left: auto;
+        right: 800px;
+    }
+}
+
+@media (max-width: 805px) {
+    .row-user .row-title::before {
+        right: 650px;
+    }
+}
+
+@media (max-width: 757px) {
+    .row-user {
+        .row-title::before {
+            background-position: right;
+            top: 43px;
+            right: 400px;
+        }
+
+        .user-content {
+            width: 335px;
+            padding: $m-6 $m-2 $m-2;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .row-user .row-title::before {
+        right: 350px;
+    }
+}
+
+@media (max-width: 500px) {
+    .row-user .row-title::before {
+        right: 300px;
+    }
+}
+
+@media (max-width: 375px) {
+    .row-user .row-title::before {
+        width: 77px;
+        height: 153px;
+        right: auto;
+        left: 0;
+    }
+}

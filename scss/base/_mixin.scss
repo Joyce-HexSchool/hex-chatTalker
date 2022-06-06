@@ -1,0 +1,68 @@
+// 圓角跟陰影
+@mixin round{
+    border-radius: 12px;
+}
+@mixin shadow {
+    box-shadow: 0 2px 10px $c-shadow;
+}
+@mixin round-shadow {
+    @include round;
+    @include shadow;
+    overflow: hidden;
+}
+@mixin circle-shadow {
+    border-radius: 50%;
+    @include shadow;
+}
+
+// 按鈕大小
+@mixin btn-size($width, $height, $font){
+    width: $width;
+    height: $height;
+    border-radius: $width/2;
+    font-size: $font;
+}
+// 按鈕顏色
+@mixin btn($bgColor) {
+    color: $c-body;
+    background: $bgColor;
+    border: 1px solid $bgColor;
+
+    &:hover {
+        background: fade_out($bgColor, 0.2);
+    }
+
+    &:active {
+        color: $bgColor;
+        background: $c-body;
+    }
+}
+@mixin btn-outline($bgColor) {
+    color: $bgColor;
+    background: $c-body;
+    border: 1px solid $bgColor;
+
+    &:hover {
+        color: $c-body;
+        background: fade_out($bgColor, 0.2);
+    }
+    
+    &:active {
+        background: $bgColor;
+    }
+}
+
+@mixin btn-top($size, $fz, $pos) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    @include btn($c-primary);
+    font-size: $fz;
+    font-weight: bold;
+    text-align: center;
+    line-height: $size;
+    position: fixed;
+    bottom: $pos;
+    right: $pos;
+    z-index: 2;
+}

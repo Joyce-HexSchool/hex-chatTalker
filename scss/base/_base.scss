@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    // outline: 1px solid black;
+}
+// 平滑滾動
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    cursor: default;
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.5;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    transition: 0.3s;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    padding: 0 $gutter;
+    margin: 0 auto;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
