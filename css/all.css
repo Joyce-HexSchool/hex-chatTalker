@@ -851,7 +851,9 @@ header {
   .row-product::before {
     width: 96px;
     height: 204px;
-    top: calc(50% + 30px); } }
+    top: calc(50% + 30px); }
+  .product-list {
+    gap: 24px; } }
 
 @media (max-width: 715px) {
   .product-btn-list {
@@ -870,8 +872,6 @@ header {
     scrollbar-width: none; }
     .product-btn-list::-webkit-scrollbar {
       display: none; }
-  .product-list {
-    gap: 24px; }
   .product-desc {
     padding: 24px; }
   .product-cost {

@@ -175,6 +175,9 @@
         height: 204px;
         top: calc(50% + 30px);
     }
+    .product-list {
+        gap: $m-3;
+    }
 }
 
 @media (max-width: 715px) {
@@ -197,10 +200,6 @@
         &::-webkit-scrollbar {
             display: none;
         }
-    }
-
-    .product-list {
-        gap: 24px;
     }
 
     .product {
