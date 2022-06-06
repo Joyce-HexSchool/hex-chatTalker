@@ -471,7 +471,7 @@ header {
     .body-index .banner::before {
       width: 49px;
       height: 126px;
-      bottom: -141px; }
+      bottom: -200px; }
     .body-index .banner .container {
       display: block;
       height: calc(100vh - 112px); }
@@ -567,6 +567,10 @@ header {
     margin-bottom: 24px; }
 
 @media (max-width: 1200px) {
+  .row-role::before {
+    width: 88px;
+    height: 135px;
+    bottom: -32px; }
   .role-list {
     width: 550px;
     margin: 0 auto;
